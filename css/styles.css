@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.7;
+    color: #111;
+}
+
+.app-name {
+    font-family: 'Gochi Hand', cursive;
+    font-size: 50px;
+    margin-left: 20px;
+}
+
+.nav-item {
+    margin: 15px;
+    padding: 10px;
+}
+
+.search-bar {
+    display: block;
+    margin: auto;
+    width: 80%;
+    margin-top: 30px;
+}
