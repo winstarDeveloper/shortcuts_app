@@ -1,23 +1,47 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shortcuts App</title>
 
-    <link rel="stylesheet" type="text/css" href="/vendor/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/vendor/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><span class="app-name">Shortcuts App</span></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"
+          ><span class="app-name">Shortcuts App</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
           <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                >Home <span class="sr-only">(current)</span></a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">App List</a>
@@ -32,10 +56,121 @@
         </div>
       </nav>
 
-      <div class="form-group search-bar center-block ">
-        <input class="form-control input-lg active-cyan-4" id="inputlg" type="text" placeholder="Search" />
+      <div class="form-group search-bar center-block">
+        <input
+          class="form-control input-lg active-cyan-4"
+          id="inputlg"
+          type="text"
+          placeholder="Search"
+        />
       </div>
+    </header>
 
+    <main>
+      <section class="grid">
+        <div class="row">
+          <div class="col-1-of-4">
+            <p class="row__ads">Advertisements</p>
+            <div class="ads__box--1">
 
-</body>
-</html> 
+            </div>
+          </div>
+          <div class="col-2-of-4 popular-apps">
+            <div class="popular-apps-box">
+              <h4>Windows 10</h4>
+              <p>Some description about the app and a list of shortcuts</p>
+            </div>
+            <div class="popular-apps-box">
+              <h4>Kaspersky</h4>
+              <p>Some description about the app and a list of shortcuts</p>
+            </div>
+            <div class="popular-apps-box">
+              <h4>MS Office</h4>
+              <p>Some description about the app and a list of shortcuts</p>
+            </div>
+            <div class="popular-apps-box">
+              <h4>VS Code</h4>
+              <p>Some description about the app and a list of shortcuts</p>
+            </div>
+            <div class="popular-apps-box">
+              <h4>Google Chrome</h4>
+              <p>Some description about the app and a list of shortcuts</p>
+            </div>
+          </div>
+          <div class="col-1-of-4">
+            <div class="row__top-apps-list">
+              <p>Top Apps List</p>
+              <ul class="row__app-list">
+                <li>Windows Shortcuts</li>
+                <li>Kaspersky</li>
+                <li>MS Office</li>
+                <li>VS Code</li>
+                <li>Google Chrome</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
+<!--
+   <div class="row">
+          <div class="col-1-of-4">
+            Column-1-of-4
+          </div>
+          <div class="col-2-of-4">
+            Column-2-of-4
+          </div>
+          <div class="col-1-of-4">
+            Column-1-of-4
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-1-of-2">
+              Column-1-of-2
+          </div>
+          <div class="col-1-of-2">
+              Column-1-of-2
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1-of-3">
+            Column-1-of-3
+          </div>
+          <div class="col-1-of-3">
+            Column-1-of-3
+          </div>
+          <div class="col-1-of-3">
+            Column-1-of-3
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1-of-3">
+            Column-1-of-3
+          </div>
+          <div class="col-2-of-3">
+            Column-2-of-3
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1-of-4">
+            Column-1-of-4
+          </div>
+          <div class="col-1-of-4">
+            Column-1-of-4
+          </div>
+          <div class="col-1-of-4">
+            Column-1-of-4
+          </div>
+          <div class="col-1-of-4">
+            Column-1-of-4
+          </div>
+        </div>
+      </section>
+-->

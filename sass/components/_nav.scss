@@ -1,0 +1,21 @@
+.navbar {
+    background-color: $dark-gray-color !important;
+}
+
+.nav-item {
+    margin: 1.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: all 0.2s;
+
+    &:hover {
+        transform: translateY(-0.3rem);
+        box-shadow: 0 0.8rem 1rem $hover-shadow;
+    }
+
+    &:active {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0.5rem 1rem $hover-shadow;
+        background-color: $active-color;
+    }
+}

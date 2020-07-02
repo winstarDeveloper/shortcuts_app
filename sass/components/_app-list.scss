@@ -1,0 +1,10 @@
+.row {
+    &__top-apps-list {
+        list-style: none;
+        padding: 1rem;
+
+        .row__app-list {
+            margin-left: 1rem;
+        }
+    }
+}
