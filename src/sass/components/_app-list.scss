@@ -5,6 +5,27 @@
 
         .row__app-list {
             margin-left: 1rem;
+
+            &--content {
+                transition: all .2s;
+                &:hover{
+                    font-weight: bolder;
+                }
+            }
         }
+    }
+}
+
+.app-list {
+    text-align: center;
+    padding: 1rem;
+
+    &__ol {
+        margin-left: 2rem;
+        
+        li {
+            display: inline;
+            margin: 2rem;
+        }   
     }
 }

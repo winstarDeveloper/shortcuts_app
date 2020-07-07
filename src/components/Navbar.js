@@ -1,11 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     return (
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="http://localhost:3000/"
-          ><span class="app-name">Shortcuts App</span></a
-        >
+        <Link class="navbar-brand" to="/"
+          ><span class="app-name">Shortcuts App</span></Link>
         <button
           class="navbar-toggler"
           type="button"
@@ -23,18 +23,17 @@ function Navbar() {
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="http://localhost:3000/"
-                >Home <span class="sr-only">(current)</span></a
-              >
+              <Link class="nav-link" to="/"
+                >Home <span class="sr-only">(current)</span></Link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://localhost:3000/">App List</a>
+              <Link class="nav-link" to="applist">App List</Link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://localhost:3000/">Feedback</a>
+              <Link class="nav-link" to="feedback">Feedback</Link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://localhost:3000/">About</a>
+              <Link class="nav-link" to="about">About</Link>
             </li>
           </ul>
         </div>

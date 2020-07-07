@@ -1,30 +1,26 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-const PopularApps = () => {
+const PopularApps = (props) => {
     return (
         <div class="col-2-of-4 popular-apps">
-            <div class="popular-apps-box">
-              <h4>Windows 10</h4>
-              <p>Some description about the app and a list of shortcuts</p>
-            </div>
-            <div class="popular-apps-box">
-              <h4>Kaspersky</h4>
-              <p>Some description about the app and a list of shortcuts</p>
-            </div>
-            <div class="popular-apps-box">
-              <h4>MS Office</h4>
-              <p>Some description about the app and a list of shortcuts</p>
-            </div>
-            <div class="popular-apps-box">
-              <h4>VS Code</h4>
-              <p>Some description about the app and a list of shortcuts</p>
-            </div>
-            <div class="popular-apps-box">
-              <h4>Google Chrome</h4>
-              <p>Some description about the app and a list of shortcuts</p>
-            </div>
+            {
+              props.popularApps.map((i) => (
+                <Link className="link" to={'/' + i.appName}>
+                <div class="popular-apps-box">
+                  <h4>{i.appName}</h4>
+                  <p>{i.description}</p>
+                </div>
+                </Link>
+              ))
+            } 
         </div>
     );
 };
+
+PopularApps.propTypes = {
+  popularApps: PropTypes.array.isRequired
+}
 
 export default PopularApps;
