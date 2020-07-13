@@ -1,10 +1,10 @@
 const express = require('express');
 const appController = require('./../controllers/appController');
-const { Next } = require('react-bootstrap/PageItem');
+const authController = require('./../controllers/authController');
 
 const appRouter = express.Router();
 
-appRouter.param('id', appController.checkId);
+// appRouter.param('id', appController.checkId);
 
 // can check if all field values are present and correct before send response
 const middleware = (req, res, next) => {
@@ -12,8 +12,11 @@ const middleware = (req, res, next) => {
     next();
 };
 
-appRouter.route("/").get(middleware, appController.getPopularApps).post(appController.addApp);
-appRouter.route("/:id").get(appController.getParticularApp).patch(appController.updateApp).delete(appController.deleteApp);
+// Alias
+appRouter.route("/top-apps-list").get(appController.getTopAppsList, appController.getPopularApps);
+
+appRouter.route("/").get(authController.protect, appController.getPopularApps).post(appController.addApp);
+appRouter.route("/:id").get(appController.getParticularApp).patch(appController.updateApp).delete(authController.protect, authController.restrictTo('admin'), appController.deleteApp);
 
 module.exports = appRouter;
 
