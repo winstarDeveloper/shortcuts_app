@@ -15,7 +15,7 @@ const middleware = (req, res, next) => {
 // Alias
 appRouter.route("/top-apps-list").get(appController.getTopAppsList, appController.getPopularApps);
 
-appRouter.route("/").get(authController.protect, appController.getPopularApps).post(appController.addApp);
+appRouter.route("/").get(/*authController.protect,*/ appController.getPopularApps).post(appController.addApp);
 appRouter.route("/:id").get(appController.getParticularApp).patch(appController.updateApp).delete(authController.protect, authController.restrictTo('admin'), appController.deleteApp);
 
 module.exports = appRouter;

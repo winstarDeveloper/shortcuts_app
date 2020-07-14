@@ -11,9 +11,9 @@ class SearchBar extends Component {
   }
   render() {
     return (
-      <div class="form-group search-bar center-block">
+      <div className="form-group search-bar center-block">
         <input
-          class="form-control input-lg active-cyan-4"
+          className="form-control input-lg active-cyan-4"
           id="inputlg"
           type="text"
           placeholder="Search"

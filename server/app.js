@@ -6,6 +6,7 @@ const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
+const cors = require('cors');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
@@ -19,6 +20,9 @@ app.use(helmet());
 if(process.argv[2] === 'development'){
     app.use(morgan('dev'));
 }
+
+// enable cors
+app.use(cors());
 
 // Request limit at 100/hr
 const limiter = rateLimit({

@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
     return (
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <Link class="navbar-brand" to="/"
-          ><span class="app-name">Shortcuts App</span></Link>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <Link className="navbar-brand" to="/"
+          ><span className="app-name">Shortcuts App</span></Link>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNav"
@@ -15,25 +15,25 @@ function Navbar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
         <div
-          class="collapse navbar-collapse justify-content-end"
+          className="collapse navbar-collapse justify-content-end"
           id="navbarNav"
         >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <Link class="nav-link" to="/"
-                >Home <span class="sr-only">(current)</span></Link>
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link className="nav-link" to="/"
+                >Home <span className="sr-only">(current)</span></Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="applist">App List</Link>
+            <li className="nav-item">
+              <Link className="nav-link" to="applist">App List</Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="feedback">Feedback</Link>
+            <li className="nav-item">
+              <Link className="nav-link" to="feedback">Feedback</Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="about">About</Link>
+            <li className="nav-item">
+              <Link className="nav-link" to="about">About</Link>
             </li>
           </ul>
         </div>

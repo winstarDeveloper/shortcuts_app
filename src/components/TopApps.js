@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 
 const TopApps = (props) => {
   return (
-    <div class="col-1-of-4">
-      <div class="row__top-apps-list">
+    <div className="col-1-of-4">
+      <div className="row__top-apps-list">
         <p>Top Apps List</p>
-        <ul class="row__app-list">
+        <ul className="row__app-list">
           {props.appsList.map((i) => (
-            <Link className="link" to={'/' + i}>
-               <li class="row__app-list--content">{i}</li>
+            <Link className="link" key={i} to={'/' + i}>
+               <li className="row__app-list--content">{i}</li>
             </Link>
           ))}
         </ul>

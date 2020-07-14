@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 
 const PopularApps = (props) => {
     return (
-        <div class="col-2-of-4 popular-apps">
+        <div className="col-2-of-4 popular-apps">
             {
               props.popularApps.map((i) => (
-                <Link className="link" to={'/' + i.appName}>
-                <div class="popular-apps-box">
-                  <h4>{i.appName}</h4>
+                <Link className="link" key={i.name} to={'/' + i.name}>
+                <div className="popular-apps-box">
+                  <h4>{i.name}</h4>
                   <p>{i.description}</p>
                 </div>
                 </Link>

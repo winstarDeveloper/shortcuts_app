@@ -244,6 +244,12 @@ body {
 .addData__label {
   margin: 2rem; }
 
+.addData__shortcut {
+  margin-top: 2rem; }
+
+.addData .btn-add {
+  margin: 0; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
