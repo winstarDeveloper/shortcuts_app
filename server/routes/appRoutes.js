@@ -7,10 +7,10 @@ const appRouter = express.Router();
 // appRouter.param('id', appController.checkId);
 
 // can check if all field values are present and correct before send response
-const middleware = (req, res, next) => {
-    console.log('Called before main handler');
-    next();
-};
+// const middleware = (req, res, next) => {
+    // console.log('Called before main handler');
+//     next();
+// };
 
 // Alias
 appRouter.route("/top-apps-list").get(appController.getTopAppsList, appController.getPopularApps);
