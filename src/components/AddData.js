@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import * as URL from './../utils/api_urls';
 
 export default class AddData extends Component {
   constructor(props) {
@@ -12,61 +13,59 @@ export default class AddData extends Component {
       action: '',
       shortcut: '',
       shortcutArr: [],
+      token: JSON.parse(sessionStorage.getItem('token')) || ''
     };
+    // console.log('token: ', this.state.token);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   async handleSubmit(event) {
     event.preventDefault();
-    console.log('in here:22', this.state.status);
-    const data = {
-      name: this.state.appName,
-      description: this.state.description,
-      shortcuts: this.state.shortcutArr,
-    };
 
     if (this.state.appName === '') {
       await this.setState({
         status: 'fail',
         message: 'App must have a Name',
       });
-      console.log('in here:32', this.state.status);
     } else if (this.state.description === '') {
       await this.setState({
         status: 'fail',
         message: 'App must have a description',
       });
-      console.log('in here:38');
     } else if (this.state.description.length < 20) {
       await this.setState({
         status: 'fail',
         message: 'App must have a description atleast 20 characters long',
       });
-      console.log('in here:44');
     } else if (this.state.shortcutArr.length === 0) {
       await this.setState({
         status: 'fail',
         message: 'App must have atleast one shortcut',
       });
-      console.log('in here:50');
-    } else{
+    } else {
       await this.setState({
-        status: 'success'
+        status: 'success',
       });
     }
 
+    const data = {
+      name: this.state.appName,
+      description: this.state.description,
+      shortcuts: this.state.shortcutArr,
+    };
+
     if (this.state.status !== 'fail') {
-      console.log('in here:55', this.state.status);
-      const response = await fetch('http://localhost:8000/api/v1/app/', {
+      const response = await fetch(URL.AppURL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          Authorization: 'Bearer ' + this.state.token,
         },
         body: JSON.stringify(data),
       });
       const res = await response.json();
       this.setState({ status: res.status, message: res.message });
-      console.log(res.message);
+      // console.log(res.message);
 
       if (res.status === 'success') {
         document.getElementById('appName').value = '';
@@ -131,7 +130,12 @@ export default class AddData extends Component {
             {this.state.message}
           </div>
         ) : null}
-        {!this.state.reqSuccess ? (
+
+        {this.state.token === '' ? (
+          <div className="alert alert-danger" role="alert">
+            You are not Logged in ! Please login
+          </div>
+        ) : !this.state.reqSuccess ? (
           <form className="text-center p-5" onSubmit={this.handleSubmit}>
             <p className="h4 mb-4 addData__title">Add Application Shortcuts</p>
 

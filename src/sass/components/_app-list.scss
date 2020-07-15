@@ -1,31 +1,35 @@
 .row {
-    &__top-apps-list {
-        list-style: none;
-        padding: 1rem;
+  &__top-apps-list {
+    list-style: none;
+    padding: 1rem;
 
-        .row__app-list {
-            margin-left: 1rem;
+    .row__app-list {
+      margin-left: 1rem;
 
-            &--content {
-                transition: all .2s;
-                &:hover{
-                    font-weight: bolder;
-                }
-            }
+      &--content {
+        transition: all 0.2s;
+        &:hover {
+          font-weight: bolder;
         }
+      }
     }
+  }
 }
 
 .app-list {
-    text-align: center;
-    padding: 1rem;
+  text-align: center;
+  padding: 1rem;
 
-    &__ol {
-        margin-left: 2rem;
-        
-        li {
-            display: inline;
-            margin: 2rem;
-        }   
+  &__ol {
+    margin-left: 2rem;
+
+    li {
+      display: inline;
+      margin: 2rem;
+      transition: all 0.2s;
+      &:hover {
+        font-weight: bolder;
+      }
     }
+  }
 }

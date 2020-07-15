@@ -34,14 +34,14 @@ const sendErrorProd = (err, res) => {
   if (err.isOperational) {
     res.status(err.statusCode).json({
       status: err.status,
-      message: err.message,
+      message: err.message
     });
   // unknown error
   } else {
     console.log('Error: ', err);
     res.status(500).json({
       status: 'error',
-      message: 'Something went wrong',
+      message: 'Something went wrong'
     });
   }
 };
@@ -63,6 +63,6 @@ module.exports = (err, req, res, next) => {
     if(error.name === 'JsonWebTokenError') error = handleJWTError(error);
     if(error.name === 'TokenExpiredError') error = handleJWTExpiredError(error);
 
-    sendErrorProd(error, res);
+    sendErrorProd(err, res);
   }
 };

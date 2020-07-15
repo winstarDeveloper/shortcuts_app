@@ -9,7 +9,7 @@ const TopApps = (props) => {
         <p>Top Apps List</p>
         <ul className="row__app-list">
           {props.appsList.map((i) => (
-            <Link className="link" key={i} to={'/' + i}>
+            <Link className="link" key={i} to={'/app/' + i}>
                <li className="row__app-list--content">{i}</li>
             </Link>
           ))}

@@ -12,6 +12,7 @@ const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 const appRouter = require('./routes/appRoutes');
 const authRouter = require('./routes/authRoutes');
+const feedbackRouter = require('./routes/feedbackRoutes');
 
 // set security http headers
 app.use(helmet());
@@ -49,8 +50,11 @@ app.use(hpp(/*{
     whitelist: ['']
 }*/));
 
+// Set route paths
 app.use("/api/v1/app", appRouter);
 app.use("/api/v1/user", authRouter);
+app.use("/api/v1/feedback", feedbackRouter);
+
 // app.use((req, res, next) => {
 //     console.log("hello Middleware");
 //     next();

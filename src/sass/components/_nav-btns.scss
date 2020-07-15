@@ -1,0 +1,36 @@
+.main-nav-btns {
+    display: block;
+    text-align: center;
+    margin-top: 3rem;
+    color: $solid-color;
+    padding: 2rem;
+
+    .page-num {
+        display: inline-block;
+        margin: 0 3rem;
+    }
+    
+    .btn {
+        cursor: pointer;
+
+        &:link, &:visited {
+            display: inline-block;
+            text-decoration: none;
+            border-bottom: 1px solid $dark-gray-color;
+            padding: 3px;
+            transition: all .2s;
+        }
+
+        &:hover {
+            background-color: $dark-gray-color;
+            box-shadow: 0 1rem 2rem rgba($shadow-color, .2);
+            transform: translateY(-2px);
+        }
+
+        &:active {
+            background-color: $active-color;
+            box-shadow: 0 .5rem 1rem rgba($shadow-color, .2);
+            transform: translateY(0);
+        }
+    }
+}

@@ -1,12 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AppList = (props) => {
     return (
-        <div class="col-3-of-4">
-            <h3 class="app-list">Applications List</h3>
-            <ol class="app-list__ol">
+        <div className="col-3-of-4">
+            <h3 className="app-list">Applications List</h3>
+            <ol className="app-list__ol">
                 { props.appsList.map((i) => (
-                    <li class="app-list__li">{i}</li>
+                    <Link className="link" key={i} to={'/app/' + i}>
+                    <li className="row__app-list--content">{i}</li>
+                 </Link>
                 )) }
             </ol>
         </div>

@@ -19,3 +19,19 @@
         background-color: $active-color;
     }
 }
+
+.btn-log{
+    background-color: $active-color;
+    box-shadow: 0 0.5rem 1rem $hover-shadow;
+
+    &:hover {
+        transform: translateY(-0.3rem);
+        box-shadow: 0 0.8rem 1rem $hover-shadow;
+    }
+
+    &:active {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0.5rem 1rem $hover-shadow;
+        background-color: $dark-gray-color;
+    }
+}

@@ -17,6 +17,7 @@ const appSchema = new mongoose.Schema({
     },
     hits: {
       type: Number,
+      default: 0,
       min: [0, 'hits cannot be negative']
     },
     shortcuts: Array

@@ -39,7 +39,7 @@ exports.getParticularApp = catchAsync(async (req, res, next) => {
   }
   const apps = await App.findOneAndUpdate(
     { name: req.params.id },
-    { hits: temp_app[0].hits + 1 }
+    { hits: (temp_app[0].hits*1) + 1 }
   );
 
   res.status(200).json({ status: 'success', results: apps.length, data: apps });
