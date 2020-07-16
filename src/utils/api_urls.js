@@ -1,4 +1,4 @@
-export const ClientURL = ""; //"http://localhost:3000";
+export const ClientURL = "http://localhost:3000";
 export const ServerURL = "http://localhost:8000";
 export const PopularAppsURL = ServerURL + "/api/v1/app/?fields=name,description";
 export const TopAppsListURL = ServerURL + "/api/v1/app/top-apps-list?sort=hits";
