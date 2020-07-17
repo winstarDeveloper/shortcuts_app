@@ -6,6 +6,6 @@ This is a showcase website to demonstrate skills acquired in Learning Web techno
 - **Server:** https://shortcuts-app-pk.herokuapp.com/
 
 
-All server requests can be seen in *postman*.json file
+All server requests can be seen in * postman *.json file
 
 
