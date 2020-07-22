@@ -5,6 +5,9 @@ This is a showcase website to demonstrate skills acquired in Learning Web techno
 - **Live:** https://shortcutsapp.herokuapp.com/
 - **Server:** https://shortcuts-app-pk.herokuapp.com/
 
+- Admin Login: https://shortcutsapp.herokuapp.com/login
+User: admin@gmail.com
+Password: mypassword
 
 All server requests can be seen in * postman *.json file
 
