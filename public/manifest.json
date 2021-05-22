@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Hacker Polls",
+  "name": "Voting system to find the best Hacker",
   "icons": [
     {
       "src": "favicon.ico",
