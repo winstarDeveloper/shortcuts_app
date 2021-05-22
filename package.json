@@ -1,4 +1,5 @@
 {
+  "_comment" : "run compile:sass before build",
   "name": "shortcuts-app",
   "version": "0.1.0",
   "private": true,
