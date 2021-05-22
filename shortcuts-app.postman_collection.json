@@ -1,4 +1,5 @@
 {
+	"_comment" : "Open file in Postman software to test server requests",
 	"info": {
 		"_postman_id": "c2e65b37-2a37-4e00-8b32-c8b4081757f4",
 		"name": "shortcuts-app",
